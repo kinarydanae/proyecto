@@ -5,7 +5,7 @@ const axios = require("axios");
 
 require("dotenv").config();
 
-const Registro = require("./Registro");
+const Registro = require("./models/Registro");
 const authRoutes = require("../auth");
 
 const { verificarToken } = require("./middleware/auth");
