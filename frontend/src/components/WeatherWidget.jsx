@@ -21,7 +21,7 @@ export default function WeatherWidget({ city }) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(`http://localhost:3000/api/weather/${city}`);
+        const res = await axios.get(`https://proyecto-1-m0ao.onrender.com/api/weather/${city}`);
         setData(res.data);
       } catch (err) {
         setError("Error de conexión");

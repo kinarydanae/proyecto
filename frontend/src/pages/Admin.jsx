@@ -12,7 +12,7 @@ export default function Admin() {
 
   const cargarRegistros = async () => {
     try {
-      const res = await fetch("http://localhost:3000/api/registros?limit=50", {
+      const res = await fetch("https://proyecto-1-m0ao.onrender.com/api/registros?limit=50", {
         headers: { Authorization: `Bearer ${token}` }
       });
       const data = await res.json();
@@ -27,7 +27,7 @@ export default function Admin() {
       alert("Por favor completa todos los campos y asegúrate de que el correo tenga '@'");
       return;
     }
-    await fetch("http://localhost:3000/api/registros", {
+    await fetch("https://proyecto-1-m0ao.onrender.com/api/registros", {
       method: "POST",
       headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
       body: JSON.stringify(nuevo)
@@ -38,7 +38,7 @@ export default function Admin() {
 
   const eliminarRegistro = async (id) => {
     if (window.confirm("¿Seguro que quieres eliminar este registro?")) {
-      await fetch(`http://localhost:3000/api/registros/${id}`, {
+      await fetch(`https://proyecto-1-m0ao.onrender.com/api/registros/${id}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` }
       });
@@ -52,7 +52,7 @@ export default function Admin() {
   };
 
   const guardarEdicion = async (id) => {
-    await fetch(`http://localhost:3000/api/registros/${id}`, {
+    await fetch(`https://proyecto-1-m0ao.onrender.com/api/registros/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
       body: JSON.stringify(editData)

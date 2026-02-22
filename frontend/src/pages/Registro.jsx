@@ -24,7 +24,7 @@ export default function Registro() {
     }
 
     try {
-      const res = await fetch("http://localhost:3000/api/registros", {
+      const res = await fetch("https://proyecto-1-m0ao.onrender.com/api/registros", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -20,7 +20,7 @@ export default function RegisterUser() {
     setError("");
 
     try {
-      const res = await fetch("http://localhost:3000/api/auth/register", {
+      const res = await fetch("https://proyecto-1-m0ao.onrender.com/api/auth/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...formData, role: "user" }),
