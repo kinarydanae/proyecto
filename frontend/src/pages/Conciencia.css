@@ -1,0 +1,79 @@
+.conciencia-page {
+    background-color: #e0d6d1;
+    min-height: 100vh;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.conciencia-hero {
+    text-align: center;
+    max-width: 800px;
+}
+
+.conciencia-hero h1 {
+    font-size: 3rem;
+    color: #4a3f3a;
+    margin-bottom: 20px;
+}
+
+.conciencia-hero p {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.conciencia-info {
+    margin-top: 20px;
+    background: white;
+    padding: 40px;
+    border-radius: 25px;
+    max-width: 700px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.conciencia-info h3 {
+    color: #beaba1;
+    margin-bottom: 15px;
+}
+
+.weather-section {
+    width: 95%;
+    max-width: 1200px;
+    margin-top: 0;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.weather-section h2 {
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: #4a3f3a;
+}
+
+.weather-grid {
+    display: flex;
+    flex-direction: row; /* Asegura que se alineen horizontalmente */
+    flex-wrap: wrap;    /* Permite que bajen si no caben en pantallas muy pequeñas */
+    justify-content: center; /* Los centra horizontalmente */
+    gap: 30px;          /* Espacio entre cada widget */
+    width: 100%;
+}
+
+/* Ajuste para que los widgets tengan un tamaño consistente en la fila */
+.weather-grid > .weather-widget {
+    flex: 1;           /* Intentan ocupar el mismo espacio */
+    min-width: 250px;  /* Pero no se encogen menos de esto */
+    max-width: 320px;  /* Ni crecen más de esto */
+}
+
+/* Responsivo: Si la pantalla es muy angosta que se apilen */
+@media (max-width: 768px) {
+    .weather-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -1,0 +1,129 @@
+.admin-container {
+    padding: 40px 20px;
+    background-color: #e0d6d1;
+    min-height: 100vh;
+}
+
+.admin-title {
+    text-align: center;
+    color: #4a3f3a;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+}
+
+/* LAYOUT LADO A LADO EN LAPTOP */
+.admin-layout {
+    display: flex;
+    flex-direction: row; /* Horizontal por defecto */
+    gap: 30px;
+    max-width: 1300px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+/* TARJETA DEL FORMULARIO (30% de ancho) */
+.admin-form-card {
+    flex: 1; 
+    background: white;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(74, 63, 58, 0.1); 
+    border: 1px solid rgba(190, 171, 161, 0.2); 
+    transition: transform 0.3s ease;
+}
+
+/* TARJETA DE LA TABLA (70% de ancho) */
+.admin-table-card {
+    flex: 2.5; /* La tabla es más ancha que el formulario */
+    background: white;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border: 1px solid rgba(190, 171, 161, 0.2);
+    transition: transform 0.3s ease;
+    max-height: 450px; /* Altura máxima para que no crezca hasta el piso */
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-table thead th {
+    position: sticky;
+    top: 0;
+    background-color: white; /* Para que no se transparente al hacer scroll */
+    z-index: 10;
+    border-bottom: 2px solid #beaba1;
+}
+
+/* ESTILOS INTERNOS */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.btn-create {
+    background-color: #beaba1;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* TABLA RESPONSIVA */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto; /* Scroll solo si la tabla se sale */
+    overflow-y: auto; /* Scroll vertical si es necesario */
+    flex-grow: 1; /* Para que ocupe el espacio disponible */
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.admin-table th, .admin-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+/* AJUSTES PARA MÓVIL */
+@media (max-width: 1024px) {
+    .admin-layout {
+        flex-direction: column; /* Se apilan verticalmente en tablet/móvil */
+        align-items: center;
+    }
+    
+    .admin-form-card, .admin-table-card {
+        width: 100%; /* Ocupan todo el ancho disponible */
+    }
+}
+.btn-edit, .btn-delete, .btn-save, .btn-cancel {
+    border: none;
+    padding: 8px 15px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* Sombra pequeña en botones */
+}
+
+.btn-edit { background-color: #beaba1; color: white; }
+.btn-delete { background-color: #ce8189; color: white; }
+.btn-save { background-color: #8fb9a8; color: white; }
+.btn-cancel { background-color: #eee; color: #666; }
+
+.btn-edit:hover, .btn-delete:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}

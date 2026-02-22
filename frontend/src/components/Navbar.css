@@ -1,0 +1,138 @@
+/* Navbar.css - Versión Profesional Renovada */
+
+.navbar {
+    width: 95%;
+    max-width: 1500px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 30px;      
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    /* Reducimos el borde a 1px y usamos un color más suave con transparencia */
+    border: 1px solid rgba(190, 171, 161, 0.4);
+    border-radius: 25px; /* Coherente con Login y Home */
+    /* Sombra más profunda y difuminada */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* Lado izquierdo */
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 30px;              
+}
+
+/* Logo */
+.navbar-logo img {
+    height: 55px;            
+    border-radius: 12px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.navbar-logo img:hover {
+    transform: scale(1.1) rotate(-3deg);
+}
+
+/* Links de navegación */
+.navbar-link {
+    text-decoration: none;
+    color: #4a3f3a;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 8px 16px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.navbar-link:hover {
+    background-color: rgba(190, 171, 161, 0.15);
+    color: #8b7366;
+}
+
+/* Indicador sutil abajo del link activo/hover */
+.navbar-link::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #beaba1;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.navbar-link:hover::after {
+    width: 20px;
+}
+
+/* Lado derecho */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Botón de admin (Sólido) */
+.navbar-admin-btn {
+    text-decoration: none;
+    background-color: #beaba1;
+    color: #ffffff;
+    padding: 10px 22px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(190, 171, 161, 0.3);
+}
+
+.navbar-admin-btn:hover {
+    background-color: #a48f83;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(190, 171, 161, 0.4);
+}
+
+/* Botón de cerrar sesión (Outline moderno) */
+.navbar-logout-btn {
+    background-color: transparent;
+    color: #ce8189; /* Un tono rojizo suave para peligro/salida */
+    border: 2px solid #ce8189;
+    padding: 8px 20px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.navbar-logout-btn:hover {
+    background-color: #ce8189;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(206, 129, 137, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 850px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+        border-radius: 30px;
+    }
+    
+    .navbar-left {
+        gap: 15px;
+    }
+
+    .navbar-right {
+        width: 100%;
+        justify-content: center;
+        border-top: 1px solid #eee;
+        padding-top: 15px;
+    }
+}

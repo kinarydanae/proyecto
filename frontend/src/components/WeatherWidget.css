@@ -1,0 +1,47 @@
+.weather-widget {
+    background-color: white;
+    border-radius: 25px;
+    padding: 25px;
+    width: 220px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    border: 1px solid rgba(190, 171, 161, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.weather-widget:hover {
+    transform: translateY(-5px);
+}
+
+.weather-widget h3 { margin: 0; color: #333; font-size: 1.2rem; }
+
+.weather-desc {
+    font-style: italic;
+    color: #8b7366;
+    margin: 8px 0;
+    text-transform: capitalize;
+}
+
+.weather-temp {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4a3f3a;
+    margin: 10px 0;
+}
+
+/* Badge de Calidad del Aire */
+.aqi-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: white;
+    margin-top: 10px;
+}
+
+.aqi-1 { background-color: #8fb9a8; } /* Verde - Excelente */
+.aqi-2 { background-color: #a3c585; } /* Verde claro */
+.aqi-3 { background-color: #f4d35e; color: #333; } /* Amarillo */
+.aqi-4 { background-color: #ee964b; } /* Naranja */
+.aqi-5 { background-color: #ce8189; } /* Rojo */

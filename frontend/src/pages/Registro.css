@@ -1,0 +1,86 @@
+/* Registro.css - Versión Profesional Renovada */
+
+.registro-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+    background: #e0d6d1;
+    /* Ajustamos el min-height para que no empuje el footer bruscamente */
+    min-height: 80vh; 
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.registro-container h2 {
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 30px;
+    letter-spacing: -1px;
+    text-align: center;
+}
+
+.registro-form {
+    background: #ffffff;
+    /* Cambiamos el borde de 10px por sombra y borde fino */
+    border: 1px solid rgba(190, 171, 161, 0.3);
+    border-radius: 25px; /* Consistente con el resto de la app */
+    padding: 40px;
+    width: 100%;
+    max-width: 400px; /* Un poco más ancho para mayor comodidad */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.registro-form input,
+.registro-form select {
+    padding: 14px;
+    border-radius: 12px;
+    font-size: 16px;
+    border: 2px solid #f0ecea;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    outline: none;
+    color: #555;
+}
+
+/* Efecto al hacer clic en los campos */
+.registro-form input:focus,
+.registro-form select:focus {
+    border-color: #beaba1;
+    box-shadow: 0 0 8px rgba(190, 171, 161, 0.2);
+}
+
+.registro-form button {
+    background-color: #beaba1;
+    color: #ffffff;
+    padding: 14px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.registro-form button:hover {
+    background-color: #a48f83;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(164, 143, 131, 0.3);
+}
+
+/* Estilo para el placeholder e italic */
+.registro-form input::placeholder {
+    font-style: italic;
+    color: #aaa;
+}
+
+/* Responsivo para móviles */
+@media (max-width: 480px) {
+    .registro-form {
+        padding: 30px 20px;
+    }
+}

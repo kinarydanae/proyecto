@@ -1,0 +1,176 @@
+/* Home.css - Versión Profesional Renovada */
+
+.home-container {
+    background-color: #e0d6d1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- HEADER / HERO SECTION --- */
+.home-header {
+    width: 90%;
+    max-width: 1200px;
+    background-color: #ffffff;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    border: 1px solid rgba(190, 171, 161, 0.3);
+    border-radius: 25px;
+    margin-top: 30px;
+    box-sizing: border-box;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.home-logo img {
+    width: 200px;
+    height: auto;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.home-logo img:hover {
+    transform: rotate(-2deg) scale(1.05);
+}
+
+.home-info {
+    display: flex;
+    flex: 1;
+    gap: 30px;
+}
+
+.home-info div {
+    flex: 1;
+}
+
+.home-info h2 {
+    margin-bottom: 12px;
+    color: #4a3f3a;
+    font-size: 1.4rem;
+    border-left: 4px solid #beaba1;
+    padding-left: 10px;
+}
+
+.home-info p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* --- SECCIÓN DE PROYECTOS (CARDS) --- */
+.home-section {
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.home-section h2 {
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+    color: #333;
+    letter-spacing: -1px;
+}
+
+.home-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.home-card {
+    background-color: #ffffff;
+    /* Borde sutil */
+    border: 1px solid rgba(190, 171, 161, 0.2);
+    border-radius: 25px;
+    width: 320px;
+    padding: 25px;
+    box-sizing: border-box;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.home-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border-color: #beaba1;
+}
+
+.home-card h3 {
+    margin-bottom: 15px;
+    color: #4a3f3a;
+    font-size: 1.3rem;
+}
+
+.home-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Mantiene las imágenes uniformes */
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.home-card p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* --- FOOTER MODERNO --- */
+.home-footer {
+    width: 100%;
+    background-color: #ffffff;
+    border-top: 1px solid rgba(190, 171, 161, 0.3);
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: auto;
+    border-radius: 40px 40px 0 0;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.home-footer p {
+    margin-bottom: 20px;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 10px 0;
+}
+
+.redes-sociales a {
+    color: #beaba1;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 10px;
+    background: #fdfaf8;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.redes-sociales a:hover {
+    background-color: #beaba1;
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .home-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .home-info {
+        flex-direction: column;
+    }
+}
