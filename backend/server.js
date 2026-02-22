@@ -5,8 +5,8 @@ const axios = require("axios");
 
 require("dotenv").config();
 
-const Registro = require("./models/Registro");
-const authRoutes = require("./auth");
+const Registro = require("./Registro");
+const authRoutes = require("../auth");
 
 const { verificarToken } = require("./middleware/auth");
 const verificarRol = require("./middleware/roleMiddleware");
@@ -232,6 +232,12 @@ app.get("/api/weather/:city", async (req, res) => {
       aqi: 1 // Excelente
     });
   }
+});
+
+const path = require("path");
+app.use(express.static(path.join(__dirname, "frontend", "build")));
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));
 });
 
 // MongoDB (NO conectar durante tests)
