@@ -1,0 +1,169 @@
+/* --- ESTILOS GENERALES --- */
+body {
+    background-color: #e0d6d1;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* --- BOTONES BASE --- */
+button {
+    background-color: #beaba1;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+/* --- COLORES DE BOTONES --- */
+.load-btn { background-color: #2d2e30; }
+.logout-btn { background-color: #ce8189; }
+.crear-btn { 
+    background-color: #beaba1; /* Color café igual que los bordes */
+    width: 90%; 
+    margin-top: 10px;
+    display: inline-block;
+}
+.crear-btn:hover { background-color: #a48f83; }
+
+/* Botón por defecto (Volver) */
+.button-row button:not(.load-btn):not(.logout-btn) {
+    background-color: #beaba1;
+}
+
+/* --- PANEL SUPERIOR --- */
+.admin-controls {
+    background-color: #ffffff;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    padding: 25px;
+    border: 10px solid #beaba1;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.button-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* --- LAYOUT LADO A LADO --- */
+.main-layout {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* --- FORMULARIO (IZQUIERDA) --- */
+.form-container {
+    background-color: #ffffff;
+    flex: 0 0 350px; /* Ancho fijo de 350px para el formulario */
+    padding: 25px;
+    border-radius: 20px;
+    border: 10px solid #beaba1;
+    text-align: center;
+}
+
+.form-container input {
+    width: 80%;
+    height: 52px;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 1px solid #beaba1;
+    font-size: 14px;
+    outline: none;
+}
+
+/* --- CONTENEDOR TABLA --- */
+.table-container {
+    background-color: #ffffff;
+    flex: 1; 
+    padding: 20px;
+    border: 10px solid #beaba1;
+    border-radius: 20px;
+    min-width: 0;
+    display: block;
+}
+
+.table-scroll {
+    max-height: 350px; 
+    height: auto;
+    overflow-y: auto !important;
+    overflow-x: hidden;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    margin-top: 10px;
+    display: block;
+}
+
+/* Forzar que la barra de scroll sea ancha y visible siempre */
+.table-scroll::-webkit-scrollbar {
+    width: 12px;
+    display: block !important;
+}
+
+.table-scroll::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.table-scroll::-webkit-scrollbar-thumb {
+    background: #beaba1; 
+    border-radius: 10px;
+    border: 2px solid #f1f1f1;
+}
+
+/* --- TABLA INTERNA --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-height: 101%; 
+}
+
+thead th {
+    background-color: #beaba1;
+    color: white;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+    color: #555;
+    background-color: white;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+    .main-layout {
+        flex-direction: column;
+        align-items: center;
+    }
+    .form-container, .table-container {
+        width: 100%;
+        max-width: 600px;
+    }
+}

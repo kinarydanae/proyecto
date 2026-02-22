@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Lucielle's designs</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <form id="loginForm" class="login-box">
+
+        <h2>Iniciar sesión</h2>
+
+        <label>Correo</label>
+        <input type="email" id="correo" required>
+
+        <label>Contraseña</label>
+        <input type="password" id="password" required>
+
+        <button type="submit">Entrar</button>
+
+        <!-- mensaje de error -->
+        <p id="error" class="error"></p>
+
+        <!-- link a registro -->
+        <p style="text-align:center; margin-top:10px;">
+            ¿No tienes una cuenta?
+            <a href="register.html">Regístrate aquí</a>
+        </p>
+
+    </form>
+
+    <script src="login.js"></script>
+
+</body>
+</html>

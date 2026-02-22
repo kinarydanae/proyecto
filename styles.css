@@ -1,0 +1,139 @@
+body{
+    background-color: #e0d6d1; /** color de fondo de toda la pagina */
+    font-family: 'Arial', sans-serif; /** tipo de letra general */
+}
+
+#encabezado{
+    width: 100%; /** ocupa todo el ancho */
+    background-color: #ffffff; /** fondo blanco */
+    padding: 30px 40px; /** espacio interno */
+    box-sizing: border-box; /** padding y borde en el tamaño */
+    display: flex; /** elementos en fila */
+    gap: 40px; /** espacio entre elementos */
+    align-items: center; /** centra verticalmente */
+    margin-bottom: 20px; /** separacion inferior */
+    border: 10px solid #beaba1; /** borde grueso */
+    border-radius: 20px; /** bordes redondeados */
+}
+
+.logo img{  
+    width: 180px; /** tamaño del logo */
+    height: auto; /** mantiene proporcion */
+    border-radius: 20px; /** bordes redondeados */
+}
+
+.info{
+    display: flex; /** informacion en fila */
+    gap: 30px; /** espacio entre bloques */
+}
+
+.info div{
+    flex: 1; /** todos ocupan el mismo espacio */
+}
+
+.info h2,
+.info h3{
+    margin: 0 0 8px 0; /** margen inferior */
+}
+
+.info p{
+    margin: 0 0 15px 0; /** separacion entre textos */
+}
+
+.contenedor{
+    display: flex; /** cuadros en fila */
+    gap: 30px; /** espacio entre cuadros */
+    flex-wrap: wrap; /** salta de linea si no caben */
+    justify-content: center; /** centra los cuadros */
+}
+
+.cuadro{
+    background-color: #ffffff; /** fondo blanco */
+    width: 27%; /** ancho del cuadro */
+    border: 10px solid #beaba1; /** borde */
+    padding: 15px; /** espacio interno */
+    text-align: center; /** texto centrado */
+    border-radius: 20px; /** bordes redondeados */
+}
+
+.cuadro img{
+    width: 100%; /** imagen ocupa todo el cuadro */
+    height: auto; /** mantiene proporcion */
+    border-radius: 20px; /** bordes redondeados */
+}
+
+#contacto{
+    background-color: #ffffff; /** fondo del formulario */
+    width: 50%; /** ancho del formulario */
+    margin: 0 auto; /** centrado horizontal */
+    padding: 20px; /** espacio interno */
+    border: 10px solid #beaba1; /** borde */
+    border-radius: 20px; /** bordes redondeados */
+    box-sizing: border-box; /** tamaño correcto */
+    display: flex; /** elementos en columna */
+    flex-direction: column; /** uno debajo de otro */
+    gap: 15px; /** espacio entre campos */
+}
+
+form h4{
+    margin: 0 0 10px 0; /** separacion inferior */
+    text-align: center; /** texto centrado */
+}
+
+form input,
+form textarea{
+    font-style: italic; /** texto en cursiva */
+    padding: 10px; /** espacio interno */
+    border: 2px solid #beaba1; /** borde del input */
+    border-radius: 10px; /** bordes redondeados */
+    font-size: 16px; /** tamaño de letra */
+    box-sizing: border-box; /** tamaño correcto */
+}
+
+form button{
+    background-color: #beaba1; /** fondo del boton */
+    color: #ffffff; /** color del texto */
+    border: none; /** sin borde */
+    padding: 12px; /** tamaño del boton */
+    border-radius: 10px; /** bordes redondeados */
+    font-size: 16px; /** tamaño de letra */
+    cursor: pointer; /** cambia el cursor */
+}
+
+form button:hover{
+    background-color: #a48f83; /** cambia color al pasar el mouse */
+}
+
+footer{
+    text-align: center; /** texto centrado */
+    margin-top: 30px; /** separación superior */
+    font-size: 14px; /** tamaño pequeño */
+    color: #555555; /** color del texto */
+}
+
+#actividad {
+    padding: 10px;            /* espacio interno */
+    border-radius: 10px;      /* bordes redondeados */
+    border: 2px solid #beaba1;/* borde del mismo color que tus inputs */
+    font-size: 16px;           /* tamaño de letra */
+    font-style: italic;        /* estilo cursiva, igual que los inputs */
+    width: 100%;               /* ocupa todo el ancho del formulario */
+    box-sizing: border-box;    /* incluye padding en el ancho */
+    margin-top: 5px;           /* separación superior */
+}
+
+footer button {
+    background-color: #beaba1; /* color de tu tema */
+    color: white;              /* texto blanco */
+    border: none;              /* sin borde */
+    padding: 12px 20px;        /* tamaño del botón */
+    border-radius: 10px;       /* bordes redondeados */
+    cursor: pointer;           /* cursor al pasar por encima */
+    font-size: 16px;           /* tamaño del texto */
+    margin-top: 10px;          /* separacion superior */
+    transition: background-color 0.3s; /* efecto hover */
+}
+
+footer button:hover {
+    background-color: #a48f83; /* cambia color al pasar el mouse */
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lucielle's designs</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header" id="encabezado">
+        <div class="logo">
+            <img src="img/logo.jpg" alt="Logo de Lucielle's designs">
+        </div>
+        <div class="info">
+            <div>
+                <h2>¿Quiénes somos?</h2>
+                <p>Somos una empresa de diseño creativo enfocada en la moda sostenible.</p>
+            </div>
+            <div>
+                <h2>Misión</h2>
+                <p>Transformar ropa usada en piezas únicas y responsables con el ambiente.</p>
+            </div>
+            <div>
+                <h2>Visión</h2>
+                <p>Crear moda con conciencia ambiental y social.</p>
+            </div>
+        </div>
+    </header>
+
+    <h2 align="center">Conoce nuestros proyectos destacados</h2>
+    <div class="contenedor">
+        <div class="cuadro">
+            <h2>Donaciones</h2>
+            <img src="img/donaciones.jpg" alt="Donaciones de ropa para reutilizar">
+            <p>Recibimos donaciones de ropa usada para transformarla en nuevas piezas.</p>
+        </div>
+        <div class="cuadro">
+            <h2>Talleres de reciclaje</h2>
+            <img src="img/talleres.jpg" alt="Taller de reciclaje de ropa">
+            <p>Ofrecemos talleres donde enseñamos técnicas para transformar ropa usada.</p>
+        </div>
+        <div class="cuadro">
+            <h2>Eventos de moda sostenible</h2>
+            <img src="img/eventos.jpg" alt="Evento de moda sostenible">
+            <p>Organizamos eventos para promover la moda sostenible.</p>
+        </div>
+    </div>
+
+    <h2 align="center">¿Quieres unirte?</h2>
+    <form id="contacto">
+        <h4>Registro a actividades</h4>
+
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="correo">Correo</label>
+        <input type="email" id="correo" name="correo" required>
+
+        <label for="actividad">Actividad</label>
+        <select id="actividad" name="actividad" required>
+            <option value="">--Selecciona una actividad--</option>
+            <option value="donaciones">Donaciones</option>
+            <option value="Taller de reciclaje">Taller de reciclaje</option>
+            <option value="Eventos de moda sostenible">Eventos de moda sostenible</option>
+        </select>
+
+        <button type="submit">Registrarme</button>
+    </form>
+
+    <footer>
+        <button id="adminBtn" onclick="window.location.href='admin.html'" style="display:none;">
+        Panel Admin
+        </button>
+        <p>© 2026 Lucielle's designs. Todos los derechos reservados.</p>
+        <div class="redes-sociales">
+            <a href="#" target="_blank">Facebook</a>
+            <a href="#" target="_blank">X</a>
+            <a href="#" target="_blank">Instagram</a>
+            <a href="#" target="_blank">TikTok</a>
+            <a href="#" target="_blank">YouTube</a>
+        </div>
+        <button onclick="logout()">Cerrar sesión</button>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function logout() {
+            localStorage.removeItem("token");
+            window.location.href = "login.html";
+        }
+    </script>
+</body>
+</html>

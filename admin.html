@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Admin - Lucielle's designs</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<div class="admin-controls">
+    <h2>Panel de Administración</h2>
+    <div class="button-row">
+        <button class="load-btn" onclick="cargarRegistros()">Cargar registros</button>
+        <button class="volver-btn" onclick="window.location.href='index.html'">Volver</button>
+        <button class="logout-btn" onclick="logout()">Cerrar sesión</button>
+    </div>
+</div>
+
+<div class="main-layout">
+    <div class="form-container">
+    <h2>Crear nuevo registro</h2>
+    <form onsubmit="event.preventDefault(); crearRegistro();">
+        <input type="text" id="nuevoNombre" placeholder="Nombre" required>
+        <input type="email" id="nuevoCorreo" placeholder="Correo" required>
+        <input type="text" id="nuevaActividad" placeholder="Actividad" required>
+        <button type="submit" class="crear-btn">Crear registro</button>
+    </form>
+</div>
+
+    <div class="table-container">
+        <h2>Registros de actividades</h2>
+        <div class="table-scroll">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Correo</th>
+                        <th>Actividad</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaRegistros">
+                    </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>
