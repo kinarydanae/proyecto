@@ -16,7 +16,7 @@ const errorHandler = require("./middleware/errorHandler");
 const app = express();
 
 // MIDDLEWARES
-app.use(cors()); // Permite que tu Frontend se conecte
+app.use(cors()); // Permite que el Frontend se conecte
 app.use(express.json());
 
 // RUTAS DE AUTENTICACIÓN
@@ -141,23 +141,38 @@ app.use((req, res) => {
   res.status(404).json({ mensaje: "Ruta no encontrada en el API" });
 });
 
-// CONEXIÓN MONGODB
-if (process.env.NODE_ENV !== "test") {
-  mongoose
-    .connect(process.env.MONGO_URI)
-    .then(() => console.log("MongoDB conectado exitosamente"))
-    .catch(err => console.error("Error conectando a MongoDB:", err));
-}
+
 
 // MANEJO GLOBAL DE ERRORES
 app.use(errorHandler);
 
-// INICIO DEL SERVIDOR
+// INICIO DEL SERVIDOR 
 const PORT = process.env.PORT || 3000;
 if (process.env.NODE_ENV !== "test") {
   app.listen(PORT, () => {
     console.log(`Servidor activo en el puerto ${PORT}`);
   });
+}
+
+module.exports = app;
+
+// --- ESTE BLOQUE REEMPLAZA AL ANTERIOR ---
+
+
+if (process.env.NODE_ENV !== "test") {
+  const dbURI = process.env.MONGO_URI;
+  if (dbURI) {
+    mongoose.connect(dbURI, { serverSelectionTimeoutMS: 2000 }) // Bajamos a 2s para que no bloquee
+      .then(() => {
+        console.log("MongoDB conectado exitosamente (Atlas)");
+        app.listen(PORT, () => console.log(`Servidor activo en el puerto ${PORT}`));
+      })
+      .catch(err => {
+        console.error("Error conectando a MongoDB Atlas:", err.message);
+        // Opcional: Iniciar el server aunque Atlas falle
+        app.listen(PORT, () => console.log(`Servidor activo sin DB (Error Atlas)`));
+      });
+  }
 }
 
 module.exports = app;
