@@ -1,4 +1,4 @@
-/* --- ESTILOS GENERALES --- */
+/*ESTILOS GENERALEs */
 body {
     background-color: #e0d6d1;
     font-family: 'Arial', sans-serif;
@@ -12,7 +12,7 @@ h2 {
     color: #333;
 }
 
-/* --- BOTONES BASE --- */
+/* BOTONES BASE*/
 button {
     background-color: #beaba1;
     color: #ffffff;
@@ -29,11 +29,11 @@ button:hover {
     transform: translateY(-1px);
 }
 
-/* --- COLORES DE BOTONES --- */
+/* COLORES DE BOTONES  */
 .load-btn { background-color: #2d2e30; }
 .logout-btn { background-color: #ce8189; }
 .crear-btn { 
-    background-color: #beaba1; /* Color café igual que los bordes */
+    background-color: #beaba1; 
     width: 90%; 
     margin-top: 10px;
     display: inline-block;
@@ -45,7 +45,7 @@ button:hover {
     background-color: #beaba1;
 }
 
-/* --- PANEL SUPERIOR --- */
+/* PANEL SUPERIOR  */
 .admin-controls {
     background-color: #ffffff;
     max-width: 800px;
@@ -63,7 +63,7 @@ button:hover {
     flex-wrap: wrap;
 }
 
-/* --- LAYOUT LADO A LADO --- */
+/* LAYOUT LADO A LADO */
 .main-layout {
     display: flex;
     justify-content: center;
@@ -73,7 +73,7 @@ button:hover {
     margin: 0 auto;
 }
 
-/* --- FORMULARIO (IZQUIERDA) --- */
+/* FORMULARIO (IZQUIERDA) */
 .form-container {
     background-color: #ffffff;
     flex: 0 0 350px; /* Ancho fijo de 350px para el formulario */
@@ -94,7 +94,7 @@ button:hover {
     outline: none;
 }
 
-/* --- CONTENEDOR TABLA --- */
+/* CONTENEDOR TABLA */
 .table-container {
     background-color: #ffffff;
     flex: 1; 
@@ -132,7 +132,7 @@ button:hover {
     border: 2px solid #f1f1f1;
 }
 
-/* --- TABLA INTERNA --- */
+/* TABLA INTERNA*/
 table {
     width: 100%;
     border-collapse: collapse;

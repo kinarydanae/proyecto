@@ -14,7 +14,7 @@ function verificarToken(req, res, next) {
       return res.status(403).json({ mensaje: "Token inválido" });
     }
 
-    req.user = user; // aquí viene id, nombre y rol
+    req.user = user; 
     next();
   });
 }

@@ -1,12 +1,9 @@
-/* Registro.css - Versión Profesional Renovada */
-
 .registro-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 60px 20px;
     background: #e0d6d1;
-    /* Ajustamos el min-height para que no empuje el footer bruscamente */
     min-height: 80vh; 
     font-family: 'Segoe UI', Arial, sans-serif;
 }
@@ -21,12 +18,11 @@
 
 .registro-form {
     background: #ffffff;
-    /* Cambiamos el borde de 10px por sombra y borde fino */
     border: 1px solid rgba(190, 171, 161, 0.3);
     border-radius: 25px; /* Consistente con el resto de la app */
     padding: 40px;
     width: 100%;
-    max-width: 400px; /* Un poco más ancho para mayor comodidad */
+    max-width: 400px; 
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -72,13 +68,12 @@
     box-shadow: 0 5px 15px rgba(164, 143, 131, 0.3);
 }
 
-/* Estilo para el placeholder e italic */
 .registro-form input::placeholder {
     font-style: italic;
     color: #aaa;
 }
 
-/* Responsivo para móviles */
+/* Responsivo para cel y tablet*/
 @media (max-width: 480px) {
     .registro-form {
         padding: 30px 20px;

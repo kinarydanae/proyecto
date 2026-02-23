@@ -7,7 +7,7 @@ import Admin from "./pages/Admin";
 import RegisterUser from "./pages/RegisterUser";
 import Conciencia from "./pages/Conciencia";  
 
-// Creamos un "Guardia" para proteger las rutas
+// para proteger las rutas
 const RutaProtegida = ({ children }) => {
   const token = localStorage.getItem("token"); // Verifica si hay sesión
 
@@ -44,7 +44,6 @@ export default function App() {
           </RutaProtegida>
         } />
 
-        {/* Esta ruta tenía un nombre raro (.jsx), mejor dejarla limpia */}
         <Route path="/register-user" element={<RegisterUser />} />
         
       </Routes>

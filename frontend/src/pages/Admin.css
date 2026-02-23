@@ -14,14 +14,14 @@
 /* LAYOUT LADO A LADO EN LAPTOP */
 .admin-layout {
     display: flex;
-    flex-direction: row; /* Horizontal por defecto */
+    flex-direction: row; 
     gap: 30px;
     max-width: 1300px;
     margin: 0 auto;
     align-items: flex-start;
 }
 
-/* TARJETA DEL FORMULARIO (30% de ancho) */
+/* TARJETA DEL FORMULARIO */
 .admin-form-card {
     flex: 1; 
     background: white;
@@ -32,16 +32,16 @@
     transition: transform 0.3s ease;
 }
 
-/* TARJETA DE LA TABLA (70% de ancho) */
+/* TARJETA DE LA TABLA  */
 .admin-table-card {
-    flex: 2.5; /* La tabla es más ancha que el formulario */
+    flex: 2.5; 
     background: white;
     padding: 30px;
     border-radius: 25px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     border: 1px solid rgba(190, 171, 161, 0.2);
     transition: transform 0.3s ease;
-    max-height: 450px; /* Altura máxima para que no crezca hasta el piso */
+    max-height: 450px; /* Altura máxima para que no crezca  */
     display: flex;
     flex-direction: column;
 }
@@ -49,7 +49,7 @@
 .admin-table thead th {
     position: sticky;
     top: 0;
-    background-color: white; /* Para que no se transparente al hacer scroll */
+    background-color: white; 
     z-index: 10;
     border-bottom: 2px solid #beaba1;
 }
@@ -100,7 +100,7 @@
 /* AJUSTES PARA MÓVIL */
 @media (max-width: 1024px) {
     .admin-layout {
-        flex-direction: column; /* Se apilan verticalmente en tablet/móvil */
+        flex-direction: column; /* Se apilan verticalmente en cel o tablet */
         align-items: center;
     }
     
@@ -115,7 +115,7 @@
     font-weight: 600;
     cursor: pointer;
     transition: all 0.2s;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* Sombra pequeña en botones */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
 }
 
 .btn-edit { background-color: #beaba1; color: white; }

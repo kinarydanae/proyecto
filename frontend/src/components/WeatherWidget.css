@@ -40,8 +40,8 @@
     margin-top: 10px;
 }
 
-.aqi-1 { background-color: #8fb9a8; } /* Verde - Excelente */
-.aqi-2 { background-color: #a3c585; } /* Verde claro */
-.aqi-3 { background-color: #f4d35e; color: #333; } /* Amarillo */
-.aqi-4 { background-color: #ee964b; } /* Naranja */
-.aqi-5 { background-color: #ce8189; } /* Rojo */
+.aqi-1 { background-color: #8fb9a8; } 
+.aqi-2 { background-color: #a3c585; } 
+.aqi-3 { background-color: #f4d35e; color: #333; } 
+.aqi-4 { background-color: #ee964b; } 
+.aqi-5 { background-color: #ce8189; } 

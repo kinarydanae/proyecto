@@ -103,16 +103,6 @@ app.delete("/api/registros/:id", verificarToken, verificarRol("admin"), async (r
   }
 });
 
-// API EXTERNA DIVISAS
-app.get("/api/currency", async (req, res, next) => {
-  try {
-    const response = await axios.get("https://api.exchangerate-api.com/v4/latest/USD");
-    res.json(response.data);
-  } catch (error) {
-    next(error);
-  }
-});
-
 // API CLIMA
 app.get("/api/weather/:city", async (req, res) => {
   const city = req.params.city;
@@ -136,7 +126,7 @@ app.get("/api/weather/:city", async (req, res) => {
   }
 });
 
-// MANEJO DE RUTAS NO ENCONTRADAS (Reemplaza el comodín * que fallaba)
+// MANEJO DE RUTAS NO ENCONTRADAS
 app.use((req, res) => {
   res.status(404).json({ mensaje: "Ruta no encontrada en el API" });
 });
@@ -156,20 +146,17 @@ if (process.env.NODE_ENV !== "test") {
 
 module.exports = app;
 
-// --- ESTE BLOQUE REEMPLAZA AL ANTERIOR ---
-
-
 if (process.env.NODE_ENV !== "test") {
   const dbURI = process.env.MONGO_URI;
   if (dbURI) {
-    mongoose.connect(dbURI, { serverSelectionTimeoutMS: 2000 }) // Bajamos a 2s para que no bloquee
+    mongoose.connect(dbURI, { serverSelectionTimeoutMS: 2000 }) 
       .then(() => {
         console.log("MongoDB conectado exitosamente (Atlas)");
         app.listen(PORT, () => console.log(`Servidor activo en el puerto ${PORT}`));
       })
       .catch(err => {
         console.error("Error conectando a MongoDB Atlas:", err.message);
-        // Opcional: Iniciar el server aunque Atlas falle
+        // Iniciar el server aunque Atlas falle
         app.listen(PORT, () => console.log(`Servidor activo sin DB (Error Atlas)`));
       });
   }
