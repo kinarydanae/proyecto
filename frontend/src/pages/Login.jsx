@@ -47,7 +47,7 @@ function Login() {
         </form>
         <p className="login-register-link">
           ¿No tienes una cuenta?{" "}
-          <span onClick={() => navigate("/RegisterUser.jsx")}>Regístrate aquí</span>
+          <span onClick={() => navigate("/register-user")}>Regístrate aquí</span>
         </p>
       </div>
     </div>
